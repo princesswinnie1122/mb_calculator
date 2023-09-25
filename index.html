@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Mass & Energy Balance Calculator | Winnie Sheng</title>
+    <script src="libs/plain-draggable.min.js"></script>
+    <script src="libs/leader-line.min.js"></script>
+</head>
+<body>
+    <div class="leftview">
+        <a href="#" class="logo">
+            <i class='bx bxs-calculator'></i>
+            <div class="logo-name"><span>M&E</span> Balance</div>
+        </a>
+        <div class="sub">For ChemE Students</div>
+        <div class="unit-bx">
+            <div class="unit-text">Add Units</div>
+            <div class="add">
+                <i class='bx bx-plus-circle'></i>
+            </div>
+        </div>
+        
+        <div id="materials-container">
+            <div class="input">Set Inputs</div>
+            <div class="material">
+                <input class="material-name" type="text" placeholder="Enter Material">
+                <div class="switch-container">
+                    <div class="switcher">
+                        <div class="option molecular" data-type="molecular">Mole</div>
+                        <div class="option mass" data-type="mass">Mass</div>
+                    </div>
+                    <div class="molecular-inputs">
+                        <input class="molecular-weight" type="text" placeholder="Molecular Weight">
+                        <input class="mole" type="text" placeholder="Mole">
+                    </div>
+                    <div class="mass-inputs">
+                        <input class="mass-amount" type="text" placeholder="Mass">
+                        <select class="mass-unit">
+                            <option value="g">g</option>
+                            <option value="kg">kg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="connection" data-type="select">
+                    <div class="connectors">
+                        <select class="box1"></select>
+                        <div class="to">connects to</div>
+                        <select class="box2"></select>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <button id="add-material-btn">Add Material</button>
+    </div>
+    <div class="canvas"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
