@@ -88,13 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     focusedBox.remove();
                     updateSelectOptions();
                 }
-            }
-            
-        });
-        
-    });
-
-    
+            }            
+        });   
+    }); 
 });
 
 function updateSelectOptions() {
@@ -142,8 +138,6 @@ document.getElementById('add-material-btn').addEventListener('click', function()
     });
 
     addLineToMap(startBox, endBox, line);
-    console.log(line); 
-
 
     setTimeout(() => {
         line.position();
@@ -174,8 +168,8 @@ document.getElementById('add-material-btn').addEventListener('click', function()
 
     // Construct the material data object
     var materialData = {
-        Unit1: "", // TODO: Retrieve box name for Unit1
-        Unit2: "", // TODO: Retrieve box name for Unit2
+        Unit1: startBoxId, // TODO: Retrieve box name for Unit1
+        Unit2: endBoxId, // TODO: Retrieve box name for Unit2
         Material: materialName,
         MolecularWeight: molecularWeight || null, // If no value is provided, set to null
         Mole: mole || null,
