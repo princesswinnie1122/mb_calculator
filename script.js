@@ -131,7 +131,7 @@ document.getElementById('add-material-btn').addEventListener('click', function()
         color: 'white', 
         size: 2.5,
         endPlugSize: 1.5,
-        // path: 'straight',
+        path: 'straight',
         hide: true,  
         animOptions: {duration: 2000},
         id: 'line'
